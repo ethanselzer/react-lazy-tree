@@ -1,0 +1,34 @@
+.logo {
+    margin-top: -4px;
+    font: 25px Courier New, Courier, monospace;
+}
+
+.examples__thumbnail img {
+    height: 250px;
+}
+
+.examples__hamburger-qr {
+    width: 75px !important;
+    height: 75px !important;
+}
+
+.hamburger__qr-container {
+    position: relative;
+    top: -8px;
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+}
+
+.hamburger__qr-container:link, .hamburger__qr-container:visited {
+    color: #3333
+}
+
+.hamburger__qr {
+    width: 150px;
+    height: 150px;
+}
+
+.hamburger__qr-caption {
+    text-align: center;
+}
