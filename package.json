@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/ethanselzer/react-lazy-tree.git"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "tree",
     "treeview",
