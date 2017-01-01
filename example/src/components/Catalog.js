@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import ReactLazyTree from 'react-lazy-tree';
+// import ReactLazyTree from '../../../dist/ReactLazyTree';
 import data from '../../data/tree';
-import ReactLazyTree from '../../../dist/ReactLazyTree';
-// import ReactLazyTree from '../components/ReactLazyTree';
 import '../../styles/catalog.css';
 import { Link } from 'react-router';
 

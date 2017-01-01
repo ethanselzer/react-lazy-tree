@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 
 import hamburger from '../../images/hamburger.png';
-// import catalog from '../../public/catalog-150-crop.png';
 import catalog from '../../images/catalog.png';
 import qr from '../../images/hamburger-qr.png';
 
