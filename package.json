@@ -7,8 +7,7 @@
     "url": "https://github.com/ethanselzer/react-lazy-tree.git"
   },
   "files": [
-    "dist/ReactTouchPosition.js",
-    "LICENCE"
+    "dist"
   ],
   "keywords": [
     "tree",
@@ -29,7 +28,7 @@
     "url": "https://github.com/ethanselzer/react-lazy-tree/issues"
   },
   "homepage": "https://github.com/ethanselzer/react-lazy-tree#readme",
-  "main": "dist/ReactTouchPosition.js",
+  "main": "dist/ReactLazyTree.js",
   "options": {
     "mocha": "--require scripts/mocha_runner test/**/*.spec.js"
   },
