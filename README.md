@@ -63,12 +63,6 @@ import ReactLazyTree from 'react-lazy-tree'
 
 ### Props API
 
-<table>
-<tr>
-<td style="color: red; font-weight: bold">foo</td><td>bar</td>
-</tr>
-</table>
-
 `data` - Tree data structure, or a collection of tree data structures.
 * Type: Object | array
 * Required: Yes
@@ -136,6 +130,7 @@ import ReactLazyTree from 'react-lazy-tree'
 * Type: Number
 * Required: No
 * Default: 0
+* Notes: To suppress interactivity entirely, specify `-1`.
 
 `shouldLazyRender` - Specify should tree nodes be rendered when becoming visible or at mount time.
 
