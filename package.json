@@ -1,7 +1,7 @@
 {
   "version": "0.1.4",
   "name": "react-lazy-tree",
-  "description": "A React component that recursively renders tree data structures.",
+  "description": "Recursively render tree data. Control markup, content and style.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ethanselzer/react-lazy-tree.git"
@@ -18,6 +18,7 @@
     "data structure",
     "family",
     "fast",
+    "flixible",
     "hamburger",
     "hierarchical",
     "recursive",
@@ -25,7 +26,8 @@
     "treeview",
     "tree view",
     "treenode",
-    "tree node"
+    "tree node",
+    "ui"
   ],
   "author": "Ethan Selzer <ethanselzer@gmail.com>",
   "license": "MIT",
