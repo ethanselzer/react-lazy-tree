@@ -11,6 +11,10 @@ Specify vertical animation, CSS classes, initial active node, [and more](#props-
 ## Demo
 Please see [demo site](https://ethanselzer.github.io/react-lazy-tree) and [example code](https://github.com/ethanselzer/react-lazy-tree/tree/master/example).
 
+## Status
+[![CircleCI](https://img.shields.io/circleci/project/github/ethanselzer/react-lazy-tree.svg)](https://circleci.com/gh/ethanselzer/react-lazy-tree)
+[![npm](https://img.shields.io/npm/v/react-lazy-tree.svg)](https://www.npmjs.com/package/react-lazy-tree)
+
 ## Installation
 
 ```sh

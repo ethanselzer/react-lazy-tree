@@ -12,15 +12,14 @@
   "keywords": [
     "tree",
     "treeview",
-    "tree-view",
     "tree view",
     "treenode",
-    "tree-node",
-    "tree nonde",
+    "tree node",
     "hamburger",
     "data driven",
     "hierarchical",
-    "recursive"
+    "recursive",
+    "family"
   ],
   "author": "Ethan Selzer <ethanselzer@gmail.com>",
   "license": "MIT",
