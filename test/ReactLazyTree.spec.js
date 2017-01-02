@@ -169,7 +169,9 @@ describe('React Lazy Tree', () => {
             rlt = mountRlt({
                 data: women,
                 shouldLazyRender: false,
-                verticalAnimationConfig: 0
+                verticalAnimationConfig: {
+                    durationInMs: 0
+                }
             });
             expect(rlt.find(TreeNode).at(0).render().find('div').eq(0).attr('style')).to.contain('height: 0px;');
 
@@ -199,7 +201,7 @@ describe('React Lazy Tree', () => {
                 //have transitioned to the height of the sublist'.
                 expect(rlt.find(TreeNode).at(0).render().find('div').eq(0).attr('style')).to.contain('height: 0px;');
                 done();
-            }, 0);
+            }, 100);
         });
     });
 
@@ -578,20 +580,6 @@ describe('React Lazy Tree', () => {
                 expect(onActiveNodeChanged.calledThrice).to.equal(true);
             });
 
-            it('is triggered when a node is touched', () => {
-                const onActiveNodeChanged = sinon.spy();
-                rlt = mountRlt({
-                    data: women,
-                    onActiveNodeChanged
-                });
-
-                rlt.find('li').at(0).simulate('touchStart');
-                rlt.find('li').at(1).simulate('touchStart');
-                rlt.find('li').at(2).simulate('touchStart');
-
-                expect(onActiveNodeChanged.calledThrice).to.equal(true);
-            });
-
             it('supports event parameter', () => {
                 const onActiveNodeChanged = sinon.spy();
                 rlt = mountRlt({
@@ -740,7 +728,7 @@ describe('React Lazy Tree', () => {
                     data: women,
                     shouldLazyRender: false,
                     verticalAnimationConfig: {
-                        durationInMs: '500'
+                        durationInMs: 500
                     }
                 });
 
