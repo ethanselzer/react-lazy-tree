@@ -10,16 +10,22 @@
     "dist"
   ],
   "keywords": [
+    "configure",
+    "configurable",
+    "customize",
+    "customizable",
+    "data driven",
+    "data structure",
+    "family",
+    "fast",
+    "hamburger",
+    "hierarchical",
+    "recursive",
     "tree",
     "treeview",
     "tree view",
     "treenode",
-    "tree node",
-    "hamburger",
-    "data driven",
-    "hierarchical",
-    "recursive",
-    "family"
+    "tree node"
   ],
   "author": "Ethan Selzer <ethanselzer@gmail.com>",
   "license": "MIT",
