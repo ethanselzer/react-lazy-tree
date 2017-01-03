@@ -29,7 +29,7 @@ class App extends Component {
         </Jumbotron>
         <Grid>
           <Row>
-            <Col sm={6} md={6} lg={6}>
+            <Col xs={12} sm={6} md={4} lg={3}>
               <Thumbnail {...{
                   alt: 'hamburger menu example',
                   className: 'examples__thumbnail',
@@ -42,7 +42,7 @@ class App extends Component {
                 <img className="examples__hamburger-qr" src={qr} alt="QR Code" />
               </Thumbnail>
             </Col>
-            <Col sm={6} md={6} lg={6}>
+            <Col xs={12} sm={6} md={4} lg={3}>
               <Thumbnail {...{
                   className: 'examples__thumbnail',
                   src: catalog,
