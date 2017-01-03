@@ -1,8 +1,10 @@
+/*eslint-disable no-unused-vars*/
 import React from 'react';
+import ReactLazyTree from '../src/ReactLazyTree';
+/*eslint-enable no-unused-vars*/
 import { shallow, mount, render } from 'enzyme';
 import { expect } from 'chai';
 import sinon from 'sinon';
-import ReactLazyTree from '../src/ReactLazyTree';
 import {women, men, kids} from './fixtures/tree';
 import collection from './fixtures/collection';
 import Label from './support/Label';

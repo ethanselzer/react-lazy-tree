@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import omit from 'lodash.omit';
 import noop from 'lodash.noop';
+/*eslint-disable no-unused-vars*/
 import TreeNode from './TreeNode';
+/*eslint-enable no-unused-vars*/
 import { findFirstNode } from './search';
 
-class ReactLazyTree extends Component {
+class ReactLazyTree extends React.Component {
     constructor(props) {
         super(props);
 

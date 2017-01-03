@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import noop from 'lodash.noop';
 import omit from 'lodash.omit';
 
-class TreeNode extends Component {
+class TreeNode extends React.Component {
     constructor(props) {
         super(props);
 
