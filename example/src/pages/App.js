@@ -11,6 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../styles/app.css';
 
 import {
+  Clearfix,
   Col,
   Grid,
   Jumbotron,
@@ -55,6 +56,7 @@ class App extends Component {
                 <p>Deep linking</p>
               </Thumbnail>
             </Col>
+            <Clearfix visibleSmBlock/>
             <Col xs={12} sm={6} md={4} lg={3}>
                 <Thumbnail {...{
                     className: 'examples__thumbnail',
