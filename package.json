@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "react-lazy-tree",
   "description": "Recursively render tree data. Control markup, content and style.",
   "repository": {
