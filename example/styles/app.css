@@ -3,6 +3,10 @@
     font: 25px Courier New, Courier, monospace;
 }
 
+h2 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .examples__thumbnail img {
     height: 250px;
 }

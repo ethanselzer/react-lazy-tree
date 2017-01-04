@@ -1,0 +1,49 @@
+/*.viewer__list {
+    margin: 0 0 0 15px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    color: #333;
+}*/
+
+.viewer__list--depth-0 {
+    /*margin: 20px;*/
+}
+
+.viewer__node--depth-0 {
+    font: 28px Arial;
+}
+
+.viewer__node--depth-1 {
+    font: 18px/2 Arial;
+}
+
+.viewer__node--depth-2 {
+    font: 14px  Arial
+}
+
+.viewer__node--depth-3 {
+    font: 12px Arial;
+}
+
+.viewer__label {
+    padding: 6px 0;
+}
+
+.viewer__link:link, .viewer__link:visited, .viewer__link:active {
+    padding: 6px 6px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.viewer__link:hover {
+    color: #16829e;
+    text-decoration: none;
+}
+
+.viewer__link--active, .viewer__link--active:hover {
+    background-color: #eee;
+    color: #333;
+    cursor: default;
+}

@@ -30,7 +30,7 @@ import ReactLazyTree from 'react-lazy-tree'
 
 <ReactLazyTree {...{
     data: tree,
-    
+
     mapInitialActiveNode: (node) => {
         return node.label === 'Dresses';
     },
@@ -52,7 +52,7 @@ import ReactLazyTree from 'react-lazy-tree'
         const labelDepth = `example__label--${depth}`;
         const isActive = isActiveNode ? 'example__label--active' : '';
         const className = `example__label ${labelDepth} ${isActive}`;
-        
+
         return (
             <Label {...{
                 className,
@@ -82,7 +82,7 @@ import ReactLazyTree from 'react-lazy-tree'
     * `isOnActivePath`: Boolean
     * `node`: Object
 * Return Type: String | JSX
-* Notes: Parameters are [named](http://www.2ality.com/2011/11/keyword-parameters.html) (i.e. properties of an object). 
+* Notes: Parameters are [named](http://www.2ality.com/2011/11/keyword-parameters.html) (i.e. properties of an object).
 
 `childrenPropertyName` - Specify data node children property name.
 * Type: String
@@ -146,7 +146,7 @@ import ReactLazyTree from 'react-lazy-tree'
 * Type: Boolean
 * Required: No
 * Default : false
-* Notes: Overrides `shouldLazyRender`
+* Notes: Overrides `shouldLazyRender` and `mapInitialActiveNode`
 
 `verticalAnimationConfig` - Specify CSS transition duration and timing.
 * Type: Object
