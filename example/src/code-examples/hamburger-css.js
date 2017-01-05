@@ -1,9 +1,11 @@
+export default `
 .hamburger {
     padding: 0;
     margin: 0;
     list-style: none;
     overflow: hidden;
     font-size: 16px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .hamburger:focus {
@@ -100,3 +102,4 @@
 .hamburger__label--depth-3 {
     padding-left: 84px;
 }
+`

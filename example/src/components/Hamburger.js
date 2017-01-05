@@ -15,6 +15,12 @@ class Hamburger extends Component {
                     return node.label === 'Dresses';
                 },
 
+                mapListClassName: ({ depth }) => {
+                    const hamburgerDepth = `hamburger--depth-${depth}`;
+
+                    return `hamburger ${hamburgerDepth}`;
+                },
+
                 mapListItemClassName: ({ depth, isLeafNode, isOnActivePath }) => {
                     const icon = isLeafNode
                         ? 'hamburger__node--leaf'
@@ -23,12 +29,6 @@ class Hamburger extends Component {
                     const nodeDepth = `hamburger__node--depth-${depth}`;
 
                     return `hamburger__node ${nodeDepth} ${leaf} ${icon}`;
-                },
-
-                mapListClassName: ({ depth }) => {
-                    const hamburgerDepth = `hamburger--depth-${depth}`;
-
-                    return `hamburger ${hamburgerDepth}`;
                 },
 
                 mapNodeContent: ({ depth, node }) => {

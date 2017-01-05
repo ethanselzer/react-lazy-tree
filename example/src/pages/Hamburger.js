@@ -5,58 +5,23 @@ import {
   Jumbotron,
   Row
 } from 'react-bootstrap';
+import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/light';
+import js from 'highlight.js/lib/languages/javascript';
+import solarized from 'react-syntax-highlighter/dist/styles/solarized-light';
+import css from 'highlight.js/lib/languages/css';
 
 import Header from '../components/Header';
 import Hamburger from '../components/Hamburger';
+import codeString from '../code-examples/hamburger';
+import cssString from '../code-examples/hamburger-css';
 
 import qr from '../../images/hamburger-qr.png';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../styles/app.css';
 
-import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/dist/light';
-import js from 'highlight.js/lib/languages/javascript';
-import solarized from 'react-syntax-highlighter/dist/styles/solarized-light';
-
 registerLanguage('javascript', js);
-
-const codeString = `
-<ReactLazyTree {...{
-    data: data.nodes,
-
-    mapInitialActiveNode: (node) => {
-        return node.label === 'Dresses';
-    },
-
-    mapListItemClassName: ({ depth, isLeafNode, isOnActivePath }) => {
-        const icon = isLeafNode
-            ? 'hamburger__node--leaf'
-            : \`hamburger__node--\${isOnActivePath ? 'expanded' : 'contracted'}\`;
-        const leaf = \`\${isOnActivePath && isLeafNode ? 'hamburger__node--active' : ''}\`;
-        const nodeDepth = \`hamburger__node--depth-\${depth}\`;
-
-        return \`hamburger__node \${nodeDepth} \${leaf} \${icon}\`;
-    },
-
-    mapListClassName: ({ depth }) => {
-        const hamburgerDepth = \`hamburger--depth-\${depth}\`;
-
-        return \`hamburger \${hamburgerDepth}\`;
-    },
-
-    mapNodeContent: ({ depth, node }) => {
-        const base = 'hamburger__label';
-        const modifier = \`hamburger__label--depth-\${depth}\`;
-        const deselect = 'hamburger--deselect';
-        const className = \`\${base} \${modifier} \${deselect}\`;
-
-        return (
-            <Label className={className} text={node.label} />
-        );
-    }
-}} />`;
-
-
+registerLanguage('css', css);
 
 class  HamburgerPage extends Component {
     render() {
@@ -66,6 +31,16 @@ class  HamburgerPage extends Component {
                 <Jumbotron>
                     <Grid style={{position: 'relative'}}>
                         <h2>Hamburger Menu Example</h2>
+                        <p className="examples__summary">
+                            Showcases mapping content and style to tree nodes.
+                            Consult the code sample, below, to see the power and
+                            flexibility afforded by this simple API.
+                            Use a scanner, like Google Goggles, on the
+                            QR code to see this example as a mobile
+                            specific page. View the  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
+                                API docs
+                            </a> for more options.
+                        </p>
                     </Grid>
                 </Jumbotron>
                 <Grid>
@@ -81,9 +56,11 @@ class  HamburgerPage extends Component {
                                 <img className="hamburger__qr" src={qr} alt="QR Code" />
                                 <div className="hamburger__qr-caption">Mobile Specific View</div>
                             </a>
-
                             <SyntaxHighlighter language='javascript' style={solarized}>
                                 {codeString}
+                            </SyntaxHighlighter>
+                            <SyntaxHighlighter language='css' style={solarized}>
+                                {cssString}
                             </SyntaxHighlighter>
                         </Col>
                     </Row>

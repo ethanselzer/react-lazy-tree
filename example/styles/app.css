@@ -22,8 +22,10 @@ p.examples__summary {
 }
 
 .hamburger__qr-container {
+    margin-bottom: 20px;
     position: relative;
     top: -8px;
+    left: -8px;
     display: inline-block;
     text-decoration: none;
     color: #333;
