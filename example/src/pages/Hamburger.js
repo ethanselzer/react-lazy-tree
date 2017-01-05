@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { 
+import {
   Col,
   Grid,
   Jumbotron,
@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import Hamburger from '../components/Hamburger';
 
 import qr from '../../images/hamburger-qr.png';
+import hamburgerCode from '../../images/hamburger-code.png';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../styles/app.css';
@@ -31,13 +32,14 @@ class  HamburgerPage extends Component {
                             <Hamburger/>
                         </Col>
                         <Col sm={6} md={6} lg={6}>
-                            <a 
+                            <a
                                 className="hamburger__qr-container"
                                 href="#/Hamburger/Touch"
                             >
                                 <img className="hamburger__qr" src={qr} alt="QR Code" />
                                 <div className="hamburger__qr-caption">Mobile Specific View</div>
                             </a>
+                            <img src={hamburgerCode} width="500" alt="Source code for hamburger menu example" />
                         </Col>
                     </Row>
                 </Grid>
