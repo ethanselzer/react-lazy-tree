@@ -6,11 +6,7 @@ export default `
         return node.label === 'Dresses';
     },
 
-    mapListClassName: ({ depth }) => {
-        const hamburgerDepth = \`hamburger--depth-\${depth}\`;
-
-        return \`hamburger \${hamburgerDepth}\`;
-    },
+    mapListClassName: () => 'hamburger',
 
     mapListItemClassName: ({ depth, isLeafNode, isOnActivePath }) => {
         const icon = isLeafNode
