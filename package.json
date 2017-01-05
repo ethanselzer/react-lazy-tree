@@ -1,7 +1,7 @@
 {
   "version": "0.1.5",
   "name": "react-lazy-tree",
-  "description": "Recursively render tree data. Control markup, content and style.",
+  "description": "Recursively render tree data. Control content, markup, and style. Specify animation, initial selection, and more.",
   "repository": {
     "type": "git",
     "url": "https://github.com/ethanselzer/react-lazy-tree.git"
