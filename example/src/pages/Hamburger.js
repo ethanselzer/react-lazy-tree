@@ -33,7 +33,7 @@ class  HamburgerPage extends Component {
                         <h2>Hamburger Menu Example</h2>
                         <p className="examples__summary">
                             Showcases mapping content and style to tree nodes.
-                            Code sample below illustrates the power and
+                            Code sample illustrates the control and
                             flexibility afforded by this simple API.
                             View the  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
                                 API docs

@@ -4,20 +4,10 @@
     list-style: none;
     overflow: hidden;
     font-size: 16px;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 .hamburger:focus {
     outline: none;
-}
-
-.hamburger--deselect {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .hamburger__node {
@@ -100,4 +90,10 @@
 
 .hamburger__label--depth-3 {
     padding-left: 84px;
+}
+
+.hamburger__label--deselect {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-touch-callout: none;
+    user-select: none;
 }

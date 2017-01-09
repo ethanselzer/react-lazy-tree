@@ -21,7 +21,7 @@ export default `
     mapNodeContent: ({ depth, node }) => {
         const base = 'hamburger__label';
         const modifier = \`hamburger__label--depth-\${depth}\`;
-        const deselect = 'hamburger--deselect';
+        const deselect = 'hamburger__label--deselect';
         const className = \`\${base} \${modifier} \${deselect}\`;
 
         return (
