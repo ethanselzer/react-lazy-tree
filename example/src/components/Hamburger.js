@@ -11,9 +11,7 @@ class Hamburger extends Component {
             <ReactLazyTree {...{
                 data: data.nodes,
 
-                mapInitialActiveNode: (node) => {
-                    return node.label === 'Dresses';
-                },
+                mapInitialActiveNode: node => (node.label === 'Dresses'),
 
                 mapListClassName: () => 'hamburger',
 

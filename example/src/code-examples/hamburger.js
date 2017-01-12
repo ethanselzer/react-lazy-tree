@@ -2,9 +2,7 @@ export default `
 <ReactLazyTree {...{
     data: nodes,
 
-    mapInitialActiveNode: (node) => {
-        return node.label === 'Dresses';
-    },
+    mapInitialActiveNode: node => (node.label === 'Dresses'),
 
     mapListClassName: () => 'hamburger',
 
