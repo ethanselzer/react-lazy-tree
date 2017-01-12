@@ -6,19 +6,11 @@
     font-size: 16px;
 }
 
-.hamburger:focus {
-    outline: none;
-}
-
 .hamburger__node {
     border-top: solid 1px #282828;
     position: relative;
     color: white;
     cursor: pointer;
-}
-
-.hamburger__node:focus {
-    outline: none;
 }
 
 .hamburger__node--active {

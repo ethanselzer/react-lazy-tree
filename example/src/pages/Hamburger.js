@@ -33,11 +33,11 @@ class  HamburgerPage extends Component {
                         <h2>Hamburger Menu Example</h2>
                         <p className="examples__summary">
                             Showcases mapping content and style to tree nodes.
-                            Code sample illustrates the control and
-                            flexibility afforded by this simple API.
-                            View the  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
+                            Code sample illustrates control and
+                            flexibility afforded by props API.
+                            View  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
                                 API docs
-                            </a> for more options. Scan the QR code for a mobile specific version of this example.
+                            </a> for more options. Scan QR code for a mobile specific version of example.
                         </p>
                     </Grid>
                 </Jumbotron>
