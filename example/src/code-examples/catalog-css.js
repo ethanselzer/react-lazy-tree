@@ -1,3 +1,4 @@
+export default `
 .catalog__list {
     width: 200px;
     margin: 0;
@@ -47,3 +48,4 @@
     color: #333;
     cursor: default;
 }
+`

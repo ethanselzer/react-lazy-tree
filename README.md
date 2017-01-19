@@ -130,7 +130,7 @@ import ReactLazyTree from 'react-lazy-tree'
     * `node`: Object
 * Notes: Parameters are [named](http://www.2ality.com/2011/11/keyword-parameters.html) (i.e. properties of an object).
 
-`interactiveStartDepth` - Specify at what depth the rendered tree should become interactive.
+`interactiveStartDepth` - Specify at what depth the rendered tree should become interactive. Depth is zero based.
 * Type: Number
 * Required: No
 * Default: 0
