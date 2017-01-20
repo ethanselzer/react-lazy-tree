@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactLazyTree from 'react-lazy-tree';
-// import ReactLazyTree from '../../../dist/ReactLazyTree';
 import data from '../../data/tree';
 import '../../styles/catalog.css';
 import { Link } from 'react-router';
@@ -12,27 +11,27 @@ class Catalog extends Component {
         return (
             <ReactLazyTree {...{
                 data: data.nodes[0],
-                
+
                 mapInitialActiveNode: (node) => {
                     const nodeParams = decodeURIComponent(getHalHref(node));
                     return  uriParams === nodeParams;
                 },
-                
+
                 mapListClassName: ({ depth }) => {
                     const listDepth = `catalog__list--depth-${depth}`;
                     return `catalog__list ${listDepth}`;
                 },
-                
+
                 mapListItemClassName: ({ depth }) => {
                     return `catalog__node--depth-${depth}`;
                 },
-                
+
                 mapNodeContent: ({ depth, index, isActiveNode, node }) => {
                     if (depth === 1 && index > 0) {
                         return false;
                     }
 
-                    return depth > 1 ? getLink(isActiveNode, node) : node.label; 
+                    return depth > 1 ? getLink(isActiveNode, node) : node.label;
                 },
 
                 interactiveStartDepth: 2

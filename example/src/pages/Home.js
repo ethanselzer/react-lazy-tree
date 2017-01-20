@@ -23,13 +23,13 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header {...this.props} />
                 <Jumbotron>
                     <Grid>
                         <h1>Examples</h1>
                         <p className="examples__summary">
-                            React Lazy Tree is a UI component that recursively renders tree data structures.
-                            Control content, markup, and style using familiar patterns.
+                            React Lazy Tree is a UI component that recursively renders tree data structures.<br/>
+                            Control content, markup, and style using familiar patterns.<br/>
                             Specify vertical animation, initial active node, and more through
                             flexible <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
                                 configuration options

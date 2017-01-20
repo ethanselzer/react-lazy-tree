@@ -10,15 +10,13 @@ class Viewer extends Component {
             <ReactLazyTree {...{
                 data: data.nodes[1],
 
-                mapListClassName: () => 'viewer__list',
+                mapListClassName: () => 'viewer',
 
                 mapListItemClassName: ({ depth }) => {
                     return `viewer__node--depth-${depth}`;
                 },
 
-                mapNodeContent: ({ node }) => {
-                    return node.label;
-                },
+                mapNodeContent: ({ node }) => node.label,
 
                 interactiveStartDepth: -1,
 

@@ -8,8 +8,16 @@ h2 {
 }
 
 p.examples__summary {
+    margin: 0;
     font-size: 16px;
-    margin-bottom: -20px;
+}
+
+.jumbotron {
+    padding-bottom: 30px;
+}
+
+.examples__summary-list {
+    margin: 0;
 }
 
 .examples__thumbnail img {
@@ -21,23 +29,13 @@ p.examples__summary {
     height: 75px !important;
 }
 
-.hamburger__qr-container {
-    margin-bottom: 20px;
-    position: relative;
-    top: -8px;
-    left: -8px;
-    display: inline-block;
-    text-decoration: none;
+.hamburger__qr-container:link, .hamburger__qr-container:visited {
     color: #333;
 }
 
-.hamburger__qr-container:link, .hamburger__qr-container:visited {
-    color: #3333
-}
-
 .hamburger__qr {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
 }
 
 .hamburger__qr-caption {

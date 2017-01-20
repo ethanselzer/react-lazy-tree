@@ -48,4 +48,4 @@ export default `
     color: #333;
     cursor: default;
 }
-`
+`;

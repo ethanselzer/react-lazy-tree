@@ -27,18 +27,31 @@ class  HamburgerPage extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <Header {...this.props}/>
                 <Jumbotron>
-                    <Grid style={{position: 'relative'}}>
-                        <h2>Hamburger Menu Example</h2>
-                        <p className="examples__summary">
-                            Showcases mapping content and style to tree nodes.
-                            Code sample illustrates control and
-                            flexibility afforded by props API.
-                            View  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
-                                API docs
-                            </a> for more options. Scan QR code for a mobile specific version of example.
-                        </p>
+                    <Grid>
+                        <Row>
+                            <Col sm={12}>
+                                <h2>Hamburger Menu Example</h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={5}>
+                                <ul className="examples__summary-list">
+                                    <li>Map content and style to tree nodes</li>
+                                    <li>llustrates control and flexibility afforded by props API</li>
+                                    <li>View  <a href="https://github.com/ethanselzer/react-lazy-tree#props-api">
+                                        API docs
+                                    </a> for more options</li>
+                                    <li>Scan QR code for a mobile specific version of example</li>
+                                </ul>
+                            </Col>
+                            <Col sm={7}>
+                                <a href="#/Hamburger/Touch">
+                                    <img className="hamburger__qr" src={qr} alt="QR Code" />
+                                </a>
+                            </Col>
+                        </Row>
                     </Grid>
                 </Jumbotron>
                 <Grid>
@@ -47,13 +60,6 @@ class  HamburgerPage extends Component {
                             <Hamburger/>
                         </Col>
                         <Col sm={6} md={8} lg={8}>
-                            <a
-                                className="hamburger__qr-container"
-                                href="#/Hamburger/Touch"
-                            >
-                                <img className="hamburger__qr" src={qr} alt="QR Code" />
-                                <div className="hamburger__qr-caption">Mobile Specific View</div>
-                            </a>
                             <SyntaxHighlighter language='javascript' style={solarized}>
                                 {codeString}
                             </SyntaxHighlighter>

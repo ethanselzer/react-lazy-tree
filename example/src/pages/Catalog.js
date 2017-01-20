@@ -25,15 +25,29 @@ class  CatalogPage extends Component {
     render() {
         return (
             <div>
-                <Header/>
+                <Header {...this.props}/>
                 <Jumbotron>
                     <Grid>
-                        <h2>Catalog Menu Example</h2>
-                        <p className="examples__summary">
-                            Information relationship expressed through typography.<br/>
-                            Interactivity constrained to third level and below.<br/>
-                            Supports initial selection of deep links.
-                        </p>
+                        <Row>
+                            <Col sm={12}>
+                                <h2>Category Menu Example</h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={5}>
+                                <ul className="examples__summary-list">
+                                    <li>Sidebar category navigation use case</li>
+                                    <li>Interactivity constrained to third level and below</li>
+                                    <li>Hidden nodes lazily rendered when becoming visible</li>
+                                </ul>
+                            </Col>
+                            <Col sm={5}>
+                                <ul className="examples__summary-list">
+                                    <li>Information relationship expressed through typography</li>
+                                    <li>Initial node selection of deep links</li>
+                                </ul>
+                            </Col>
+                        </Row>
                     </Grid>
                 </Jumbotron>
                 <Grid>

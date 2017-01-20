@@ -42,4 +42,4 @@ function getLink(isActiveNode, node) {
 function getHalHref(node) {
     return node._links['http://example.com/rels/catalog'].href;
 }
-`
+`;

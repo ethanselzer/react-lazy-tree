@@ -90,4 +90,4 @@ export default `
     -webkit-touch-callout: none;
     user-select: none;
 }
-`
+`;
