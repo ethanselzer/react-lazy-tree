@@ -7,7 +7,7 @@ class TreeNode extends React.Component {
         super(props);
 
         this.state = this._getInitialState();
-        
+
         this.onActiveNodeChanged = this.onActiveNodeChanged.bind(this);
 
         this.deferAnimateChildrenInvisibleDuration = 100;
@@ -49,7 +49,7 @@ class TreeNode extends React.Component {
 
     componentDidMount() {
         if (!this.isBranchNode()) {
-            return; 
+            return;
         }
 
         if (this.isOnActivePath(this.props)) {
@@ -59,7 +59,7 @@ class TreeNode extends React.Component {
 
     onActiveNodeChanged(e) {
         e.stopPropagation();
-        
+
         const { currentPath, depth, index, node } = this.props;
         this.props.onActiveNodeChanged(e, node, depth, index, currentPath);
     }
@@ -109,9 +109,9 @@ class TreeNode extends React.Component {
         return (
             <li { ...{
                 className: mapListItemClassName({
-                    depth, 
+                    depth,
                     isActiveNode,
-                    isLeafNode: false, 
+                    isLeafNode: false,
                     isOnActivePath,
                     node
                 }),
@@ -119,9 +119,9 @@ class TreeNode extends React.Component {
             }}>
                 {mapNodeContent({
                     depth,
-                    index, 
+                    index,
                     isActiveNode,
-                    isLeafNode: false, 
+                    isLeafNode: false,
                     isOnActivePath,
                     node
                 })}
@@ -147,7 +147,7 @@ class TreeNode extends React.Component {
     }
 
     getLeafNode() {
-        const { 
+        const {
             depth,
             index,
             mapListItemClassName,
@@ -162,7 +162,7 @@ class TreeNode extends React.Component {
         return (
             <li {...{
                 className: mapListItemClassName({
-                    depth, 
+                    depth,
                     isActiveNode,
                     isLeafNode,
                     isOnActivePath,
@@ -176,7 +176,7 @@ class TreeNode extends React.Component {
                     isActiveNode,
                     isLeafNode,
                     isOnActivePath,
-                    node 
+                    node
                 })}
             </li>
         );
@@ -215,7 +215,7 @@ class TreeNode extends React.Component {
             }, this.props.verticalAnimationConfig.durationInMs);
         }, 0);
     }
-    
+
     animateChildrenInvisible() {
         this.setChildrenContainerHeight(`${this.el.clientHeight}px`);
         setTimeout(() => {
@@ -250,7 +250,7 @@ class TreeNode extends React.Component {
 
     isActiveNode(props) {
         const {activePath, currentPath} = props;
-        
+
         return activePath === currentPath;
     }
 

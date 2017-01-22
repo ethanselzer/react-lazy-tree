@@ -48,7 +48,7 @@
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
-    "test-cov": "istanbul cover -hook-run-in-context _mocha --require scripts/mocha_runner test/**/*.spec.js"
+    "test-cov": "gulp test:coverage"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
@@ -64,12 +64,19 @@
     "eslint": "^2.7.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.5",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
     "react-dom": "^15.0.0",
+    "run-sequence": "^1.2.2",
     "sinon": "^1.17.6"
   },
   "peerDependencies": {
