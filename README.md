@@ -32,9 +32,7 @@ import ReactLazyTree from 'react-lazy-tree'
 <ReactLazyTree {...{
     data: tree,
 
-    mapInitialActiveNode: (node) => {
-        return node.label === 'Dresses';
-    },
+    mapInitialActiveNode: (node) => node.label === 'Dresses',
 
     mapListClassName: ({ depth }) => {
         const exampleDepth = `example--depth-${depth}`;
@@ -69,7 +67,7 @@ import ReactLazyTree from 'react-lazy-tree'
 ### Props API
 
 `data` - Tree data structure, or a collection of tree data structures.
-* Type: Object | array
+* Type: Object | Array
 * Required: Yes
 
 `mapNodeContent` - Specify content, markup, and style for tree node presentation.
@@ -182,5 +180,7 @@ add commits, and [open a pull request](https://github.com/ethanselzer/react-lazy
 
 ## License
 MIT
+
+- - -
 
 You are awesome! ✨💫

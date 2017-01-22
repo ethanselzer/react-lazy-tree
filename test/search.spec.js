@@ -1,6 +1,5 @@
 
 import { expect } from 'chai';
-// import sinon from 'sinon';
 import collection from './fixtures/collection';
 import {mapPathToData} from '../src/search';
 
