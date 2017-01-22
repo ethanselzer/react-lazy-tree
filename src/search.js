@@ -33,15 +33,15 @@ export function mapPathToData(data, childrenPropertyName, path, predicate) {
 
 function _mapPathToData(data, childrenPropertyName, path, predicate, depth, currentPath, out) {
     const p = path.split(',').slice(0, depth + 1).join();
-    
+
     data = normalizeData(data);
-    
+
     for (let i = 0; i < data.length; i++) {
         const node = data[i];
         const children = node[childrenPropertyName];
 
         if (!children) {
-            console.warn(`It looks like the property named ${childrenProperyName} was not found in your data!`);
+            throw new Error(`Supplied value for prop \`childrenPropertyName\`, ${childrenPropertyName}, was not found in at least one node of your data!`);
         }
 
         currentPath[depth] = i;

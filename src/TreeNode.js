@@ -3,6 +3,7 @@ import noop from 'lodash.noop';
 import omit from 'lodash.omit';
 
 class TreeNode extends React.Component {
+    /* istanbul ignore next */
     constructor(props) {
         super(props);
 

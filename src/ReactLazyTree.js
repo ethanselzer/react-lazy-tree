@@ -7,6 +7,7 @@ import TreeNode from './TreeNode';
 import { findFirstNode } from './search';
 
 class ReactLazyTree extends React.Component {
+    /* istanbul ignore next */
     constructor(props) {
         super(props);
 
@@ -40,10 +41,6 @@ class ReactLazyTree extends React.Component {
         }
 
         this.props.onActiveNodeChanged({ e, node, depth, index, activePath: path });
-    }
-
-    isActivePath(path) {
-        return path === this.state.activePath;
     }
 
     isOnActivePath(path, activePath, depth) {

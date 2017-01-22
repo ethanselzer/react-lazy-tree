@@ -1,5 +1,6 @@
 
 import { expect } from 'chai';
+// import sinon from 'sinon';
 import collection from './fixtures/collection';
 import {mapPathToData} from '../src/search';
 
@@ -9,7 +10,7 @@ describe('Search', () => {
             return node.label;
         }
 
-        it('finds a path at depth 0', () => {    
+        it('finds a path at depth 0', () => {
             const out = mapPathToData(collection, 'children', '2', predicate);
 
             expect(out[0]).to.equal('Kids');
@@ -37,6 +38,20 @@ describe('Search', () => {
             expect(out[1]).to.equal('Clothing');
             expect(out[2]).to.equal('Dresses');
             expect(out[3]).to.equal('Work')
+        });
+
+        it('throws if children property name is not found', () => {
+            function shouldThrow() {
+                mapPathToData(collection, 'foo', '2', predicate);
+            }
+
+            expect(shouldThrow).to.throw('Supplied value for prop `childrenPropertyName`, foo, was not found in at least one node of your data!');
+        });
+
+        it('normalizes a single root node data source into a collection', () => {
+            const out = mapPathToData(collection[0], 'children', '0', predicate);
+
+            expect(out[0]).to.equal('Women');
         });
     });
 });
