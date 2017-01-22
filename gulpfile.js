@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
+var coveralls = require('gulp-coveralls');
 var isparta = require('isparta');
 var runSequence = require('run-sequence');
 
@@ -39,6 +40,15 @@ gulp.task('coverage:report', function () {
 
 gulp.task('test:coverage', function (done) {
     runSequence('coverage:instrument', 'test', 'coverage:report', done);
+});
+
+gulp.task('coveralls', function() {
+    return gulp.src('./coverage/lcov.info')
+        .pipe(coveralls());
+});
+
+gulp.task('test:coveralls', function (done) {
+    runSequence('test:coverage', 'coveralls', done);
 });
 
 gulp.task('tdd', function () {

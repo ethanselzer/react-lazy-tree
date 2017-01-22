@@ -48,7 +48,8 @@
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
-    "test-cov": "gulp test:coverage"
+    "test-cov": "gulp test:coverage",
+    "test-coveralls": "gulp test:coveralls"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
@@ -60,11 +61,13 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
     "enzyme": "^2.2.0",
     "eslint": "^2.7.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.9.1",
+    "gulp-coveralls": "^0.1.4",
     "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^3.0.1",
     "gulp-util": "^3.0.8",
