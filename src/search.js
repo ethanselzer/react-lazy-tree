@@ -1,12 +1,3 @@
-export function findFirstNode(nodes, predicate, childrenPropertyName) {
-    const paths = find(nodes, predicate, childrenPropertyName);
-    return paths.length ? paths[0] : '';
-}
-
-function find(nodes, predicate, childrenPropertyName) {
-    return findOrdinalPaths(nodes, childrenPropertyName, predicate, 0, [], []);
-}
-
 function findOrdinalPaths(nodes, childrenPropertyName, predicate, depth, path, paths) {
     for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
@@ -27,8 +18,16 @@ function findOrdinalPaths(nodes, childrenPropertyName, predicate, depth, path, p
     return paths;
 }
 
-export function mapPathToData(data, childrenPropertyName, path, predicate) {
-    return _mapPathToData(data, childrenPropertyName, path, predicate, 0, [], []);
+function find(nodes, predicate, childrenPropertyName) {
+    return findOrdinalPaths(nodes, childrenPropertyName, predicate, 0, [], []);
+}
+
+function normalizeData(data) {
+    if (!Array.isArray(data)) {
+        return [data];
+    }
+
+    return data;
 }
 
 function _mapPathToData(data, childrenPropertyName, path, predicate, depth, currentPath, out) {
@@ -52,17 +51,26 @@ function _mapPathToData(data, childrenPropertyName, path, predicate, depth, curr
         }
 
         if (children.length) {
-            _mapPathToData(children, childrenPropertyName, path, predicate, depth + 1, currentPath, out);
+            _mapPathToData(
+                children,
+                childrenPropertyName,
+                path,
+                predicate,
+                depth + 1,
+                currentPath,
+                out
+            );
         }
     }
 
     return out;
 }
 
-function normalizeData(data) {
-    if (!Array.isArray(data)) {
-        return [data];
-    }
+export function findFirstNode(nodes, predicate, childrenPropertyName) {
+    const paths = find(nodes, predicate, childrenPropertyName);
+    return paths.length ? paths[0] : '';
+}
 
-    return data;
+export function mapPathToData(data, childrenPropertyName, path, predicate) {
+    return _mapPathToData(data, childrenPropertyName, path, predicate, 0, [], []);
 }

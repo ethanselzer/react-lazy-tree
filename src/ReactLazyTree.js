@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import omit from 'lodash.omit';
 import noop from 'lodash.noop';
-/*eslint-disable no-unused-vars*/
 import TreeNode from './TreeNode';
-/*eslint-enable no-unused-vars*/
 import { findFirstNode } from './search';
 
 class ReactLazyTree extends React.Component {
@@ -11,10 +9,14 @@ class ReactLazyTree extends React.Component {
     constructor(props) {
         super(props);
 
-        const { childrenPropertyName, data, mapInitialActiveNode  } = props;
+        const { childrenPropertyName, data, mapInitialActiveNode } = props;
         let activePath = '';
         if (typeof mapInitialActiveNode === 'function') {
-            activePath = findFirstNode(this.normalizeData(data), mapInitialActiveNode, childrenPropertyName);
+            activePath = findFirstNode(
+                this.normalizeData(data),
+                mapInitialActiveNode,
+                childrenPropertyName
+            );
         }
 
         this.state = {
@@ -27,8 +29,8 @@ class ReactLazyTree extends React.Component {
     }
 
     onActiveNodeChanged(e, node, depth, index, path) {
-        const {activePath} = this.state;
-        const {interactiveStartDepth} = this.props;
+        const { activePath } = this.state;
+        const { interactiveStartDepth } = this.props;
 
         if (this.isOnActivePath(path, activePath, depth)) {
             path = this.slicePathAtDepth(path, depth);
@@ -61,7 +63,7 @@ class ReactLazyTree extends React.Component {
         return data;
     }
 
-    render () {
+    render() {
         const omitions = ['isInteractive', 'mapInitialActiveNode', 'data'];
 
         return (
@@ -69,7 +71,7 @@ class ReactLazyTree extends React.Component {
                 activePath: this.state.activePath,
                 node: this.normalizeData(this.props.data),
                 onActiveNodeChanged: this.onActiveNodeChanged
-            }}/>
+            }} />
         );
     }
 }
@@ -85,8 +87,11 @@ ReactLazyTree.propTypes = {
     onActiveNodeChanged: PropTypes.func,
     shouldLazyRender: PropTypes.bool,
     shouldShowAllNodes: PropTypes.bool,
-    verticalAnimationConfig: PropTypes.object
-}
+    verticalAnimationConfig: PropTypes.shape({
+        durationInMs: PropTypes.number,
+        timing: PropTypes.string
+    })
+};
 
 ReactLazyTree.defaultProps = {
     childrenPropertyName: 'children',

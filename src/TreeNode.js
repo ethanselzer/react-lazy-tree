@@ -86,7 +86,7 @@ class TreeNode extends React.Component {
 
         return (
             <ul className={mapListClassName({ depth, isOnActivePath: true, node })}>
-                {this.getChildNodes(Object.assign({}, omit(this.props, 'node'), {nodes: node}))}
+                {this.getChildNodes(Object.assign({}, omit(this.props, 'node'), { nodes: node }))}
             </ul>
         );
     }
@@ -106,9 +106,15 @@ class TreeNode extends React.Component {
 
         const isOnActivePath = this.isOnActivePath(this.props);
         const isActiveNode = this.isActiveNode(this.props);
+        const shouldRenderChildren = (
+            isOnActivePath ||
+            !shouldLazyRender ||
+            this.hasRenderedChildren() ||
+            shouldShowAllNodes
+        );
 
         return (
-            <li { ...{
+            <li {...{
                 className: mapListItemClassName({
                     depth,
                     isActiveNode,
@@ -126,7 +132,7 @@ class TreeNode extends React.Component {
                     isOnActivePath,
                     node
                 })}
-                {(isOnActivePath || !shouldLazyRender || this.hasRenderedChildren() || shouldShowAllNodes) && (
+                {shouldRenderChildren && (
                     <div style={this.state.childrenContainerStyle}>
                         <ul {...{
                             className: mapListClassName({
@@ -134,7 +140,9 @@ class TreeNode extends React.Component {
                                 isOnActivePath,
                                 node
                             }),
-                            ref: (el) => this.el = el
+                            ref: (el) => {
+                                this.el = el;
+                            }
                         }}>
                             {this.getChildNodes(Object.assign({}, this.props, {
                                 depth: depth + 1,
@@ -188,19 +196,19 @@ class TreeNode extends React.Component {
         return nodes.map((node, index) => {
             const newPath = this.getNewPath(currentPath, index);
             return (
-                <TreeNode {...props} { ...{
+                <TreeNode {...props} {...{
                     index,
                     node,
                     currentPath: newPath,
                     key: index
-                }}/>
+                }} />
             );
         });
     }
 
     setChildrenContainerHeight(height, cb) {
         this.setState({
-            childrenContainerStyle: Object.assign({}, this.state.childrenContainerStyle, {height: `${height}`})
+            childrenContainerStyle: Object.assign({}, this.state.childrenContainerStyle, { height: `${height}` })
         }, cb);
     }
 
@@ -225,7 +233,7 @@ class TreeNode extends React.Component {
     }
 
     isOnActivePath(props) {
-        const {activePath, currentPath, depth} = props;
+        const { activePath, currentPath, depth } = props;
         const ap = this.getPathAtDepth(activePath, depth);
         const cp = this.getPathAtDepth(currentPath, depth);
 
@@ -237,7 +245,7 @@ class TreeNode extends React.Component {
     }
 
     getPathAtDepth(path, depth) {
-        return path.split(',').slice(0, depth+1).join();
+        return path.split(',').slice(0, depth + 1).join();
     }
 
     isRootNode() {
@@ -245,12 +253,12 @@ class TreeNode extends React.Component {
     }
 
     isBranchNode() {
-        const {node, childrenPropertyName} = this.props;
-        return this.hasChildren(node, childrenPropertyName)
+        const { node, childrenPropertyName } = this.props;
+        return this.hasChildren(node, childrenPropertyName);
     }
 
     isActiveNode(props) {
-        const {activePath, currentPath} = props;
+        const { activePath, currentPath } = props;
 
         return activePath === currentPath;
     }
@@ -264,7 +272,7 @@ class TreeNode extends React.Component {
     }
 
     areChildrenVisbile() {
-        return this.state.childrenContainerStyle.height !== '0px'
+        return this.state.childrenContainerStyle.height !== '0px';
     }
 }
 

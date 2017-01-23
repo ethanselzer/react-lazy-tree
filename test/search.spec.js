@@ -1,7 +1,7 @@
 
 import { expect } from 'chai';
 import collection from './fixtures/collection';
-import {mapPathToData} from '../src/search';
+import { mapPathToData } from '../src/search';
 
 describe('Search', () => {
     describe('mapPathToData', () => {
@@ -19,7 +19,7 @@ describe('Search', () => {
             const out = mapPathToData(collection, 'children', '0,5', predicate);
 
             expect(out[0]).to.equal('Women');
-            expect(out[1]).to.equal('Intimate Apparel')
+            expect(out[1]).to.equal('Intimate Apparel');
         });
 
         it('finds a path at depth 2', () => {
@@ -36,7 +36,7 @@ describe('Search', () => {
             expect(out[0]).to.equal('Women');
             expect(out[1]).to.equal('Clothing');
             expect(out[2]).to.equal('Dresses');
-            expect(out[3]).to.equal('Work')
+            expect(out[3]).to.equal('Work');
         });
 
         it('throws if children property name is not found', () => {
