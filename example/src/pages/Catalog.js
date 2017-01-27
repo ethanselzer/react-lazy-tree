@@ -9,6 +9,7 @@ import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/di
 import solarized from 'react-syntax-highlighter/dist/styles/solarized-light';
 import js from 'highlight.js/lib/languages/javascript';
 import css from 'highlight.js/lib/languages/css';
+import Helmet from 'react-helmet';
 
 import Catalog from '../components/Catalog';
 import Header from '../components/Header';
@@ -25,6 +26,7 @@ class  CatalogPage extends Component {
     render() {
         return (
             <div>
+                <Helmet title="Category Menu | React Lazy Tree" />
                 <Header {...this.props}/>
                 <Jumbotron>
                     <Grid>

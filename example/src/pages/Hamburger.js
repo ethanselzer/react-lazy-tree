@@ -9,6 +9,7 @@ import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/di
 import js from 'highlight.js/lib/languages/javascript';
 import solarized from 'react-syntax-highlighter/dist/styles/solarized-light';
 import css from 'highlight.js/lib/languages/css';
+import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
 import Hamburger from '../components/Hamburger';
@@ -27,6 +28,7 @@ class  HamburgerPage extends Component {
     render() {
         return (
             <div>
+                <Helmet title="Hamburger Menu | React Lazy Tree" />
                 <Header {...this.props}/>
                 <Jumbotron>
                     <Grid>

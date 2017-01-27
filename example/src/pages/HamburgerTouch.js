@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+
 import Hamburger from '../components/Hamburger';
 
 class  HamburgerTouchPage extends Component {
@@ -13,6 +15,7 @@ class  HamburgerTouchPage extends Component {
                 backgroundColor: '#333',
                 overflow:'scroll'
             }}>
+                <Helmet title="Hamburger Touch | React Lazy Tree" />
                 <Hamburger/>
             </div>
         );

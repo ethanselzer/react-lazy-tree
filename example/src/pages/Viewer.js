@@ -9,6 +9,7 @@ import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/di
 import js from 'highlight.js/lib/languages/javascript';
 import solarized from 'react-syntax-highlighter/dist/styles/solarized-light';
 import css from 'highlight.js/lib/languages/css';
+import Helmet from 'react-helmet';
 
 import Viewer from '../components/Viewer';
 import Header from '../components/Header';
@@ -25,6 +26,7 @@ class  ViewerPage extends Component {
     render() {
         return (
             <div>
+                <Helmet title="Viewer | React Lazy Tree" />
                 <Header {...this.props}/>
                 <Jumbotron>
                     <Grid>
