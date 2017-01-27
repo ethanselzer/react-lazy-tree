@@ -20,30 +20,32 @@
 
 .hamburger__node--contracted::before {
     position: absolute;
-    top: 9px;
+    top: 14px;
     right: 12px;
-    content: '+';
-    font: 20px/1 Arial;
+    content: '\EA06';
+    font-family: rack-icons;
+    font-size: 22px;
+    line-height: 1;
     color: white;
     z-index: 1;
 }
 
 .hamburger__node--expanded::before {
     position: absolute;
-    top: 6px;
-    right: 14px;
-    content: '-';
-    font: 24px/1 Arial;
+    top: 14px;
+    right: 12px;
+    content: '\EA07';
+    font: 22px/1 rack-icons;
     color: white;
     z-index: 1;
 }
 
 .hamburger__node--leaf::before {
     position: absolute;
-    top: 13px;
-    right: 6px;
-    content: '〉';
-    font: 13px/1 Arial;
+    top: 14px;
+    right: 12px;
+    content: '\EA0A';
+    font: 22px/1 rack-icons;
     color: white;
 }
 
