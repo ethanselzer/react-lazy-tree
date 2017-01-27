@@ -41,3 +41,7 @@ p.examples__summary {
 .hamburger__qr-caption {
     text-align: center;
 }
+
+li.active a {
+    cursor: default;
+}
