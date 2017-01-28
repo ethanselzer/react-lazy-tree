@@ -42,6 +42,10 @@ p.examples__summary {
     text-align: center;
 }
 
+a.highligher:link, a.highligher:active, a.highlighter:hover, a.highligher:visited {
+    text-decoration: none;
+}
+
 li.active a {
     cursor: default;
 }

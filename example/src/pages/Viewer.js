@@ -35,6 +35,16 @@ class  ViewerPage extends Component {
                             <li>Tree visualization use case</li>
                             <li>Show all nodes</li>
                             <li>Suppress interactivity</li>
+                            <li>
+                                Code:&nbsp;
+                                <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Viewer.js">
+                                    JS
+                                </a>
+                                &nbsp;
+                                <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/viewer.css">
+                                    CSS
+                                </a>
+                            </li>
                         </ul>
                     </Grid>
                 </Jumbotron>
@@ -44,12 +54,22 @@ class  ViewerPage extends Component {
                             <Viewer {...this.props}/>
                         </Col>
                         <Col sm={6} md={8} lg={8}>
-                            <SyntaxHighlighter language='javascript' style={solarized}>
-                                {codeString}
-                            </SyntaxHighlighter>
-                            <SyntaxHighlighter language='css' style={solarized}>
-                                {cssString}
-                            </SyntaxHighlighter>
+                                                        <a
+                                className="highlighter"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Viewer.js"
+                            >
+                                <SyntaxHighlighter language='javascript' style={solarized}>
+                                    {codeString}
+                                </SyntaxHighlighter>
+                            </a>
+                            <a
+                                className="highlighter"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/viewer.css"
+                            >
+                                <SyntaxHighlighter language='css' style={solarized}>
+                                    {cssString}
+                                </SyntaxHighlighter>
+                            </a>
                         </Col>
                     </Row>
                 </Grid>

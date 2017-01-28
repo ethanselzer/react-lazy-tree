@@ -47,6 +47,16 @@ class  CatalogPage extends Component {
                                 <ul className="examples__summary-list">
                                     <li>Information relationship expressed through typography</li>
                                     <li>Initial node selection of deep links</li>
+                                    <li>
+                                        Code:&nbsp;
+                                        <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Catalog.js">
+                                            JS
+                                        </a>
+                                        &nbsp;
+                                        <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/catalog.css">
+                                            CSS
+                                        </a>
+                                    </li>
                                 </ul>
                             </Col>
                         </Row>
@@ -58,12 +68,22 @@ class  CatalogPage extends Component {
                             <Catalog {...this.props}/>
                         </Col>
                         <Col sm={6} md={8} lg={8}>
-                            <SyntaxHighlighter language='javascript' style={solarized}>
-                                {codeString}
-                            </SyntaxHighlighter>
-                            <SyntaxHighlighter language='css' style={solarized}>
-                                {cssString}
-                            </SyntaxHighlighter>
+                            <a
+                                className="highlighter"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Catalog.js"
+                            >
+                                <SyntaxHighlighter language='javascript' style={solarized}>
+                                    {codeString}
+                                </SyntaxHighlighter>
+                            </a>
+                            <a
+                                className="highligher"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/catalog.css"
+                            >
+                                <SyntaxHighlighter language='css' style={solarized}>
+                                    {cssString}
+                                </SyntaxHighlighter>
+                            </a>
                         </Col>
                     </Row>
                 </Grid>

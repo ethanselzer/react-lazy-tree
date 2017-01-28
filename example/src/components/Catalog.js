@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import ReactLazyTree from 'react-lazy-tree';
-import data from '../../data/tree';
-import '../../styles/catalog.css';
 import { Link } from 'react-router';
+import ReactLazyTree from 'react-lazy-tree';
+
+import data from '../../data/tree';
+
+import '../../styles/catalog.css';
 
 class Catalog extends Component {
     render() {

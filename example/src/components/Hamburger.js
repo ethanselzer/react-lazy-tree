@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import ReactLazyTree from 'react-lazy-tree';
-// import ReactLazyTree from '../../../dist/ReactLazyTree';
+
 import data from '../../data/tree';
 import Label from '../components/Label';
+
 import '../../styles/hamburger.css';
 
 class Hamburger extends Component {

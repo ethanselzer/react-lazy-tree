@@ -46,6 +46,16 @@ class  HamburgerPage extends Component {
                                         API docs
                                     </a> for more options</li>
                                     <li>Scan QR code for a mobile specific version of example</li>
+                                    <li>
+                                        Code:&nbsp;
+                                        <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Hamburger.js">
+                                            JS
+                                        </a>
+                                        &nbsp;
+                                        <a href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/hamburger.css">
+                                            CSS
+                                        </a>
+                                    </li>
                                 </ul>
                             </Col>
                             <Col sm={7}>
@@ -62,12 +72,22 @@ class  HamburgerPage extends Component {
                             <Hamburger/>
                         </Col>
                         <Col sm={6} md={8} lg={8}>
-                            <SyntaxHighlighter language='javascript' style={solarized}>
-                                {codeString}
-                            </SyntaxHighlighter>
-                            <SyntaxHighlighter language='css' style={solarized}>
-                                {cssString}
-                            </SyntaxHighlighter>
+                            <a
+                                className="highlighter"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/src/components/Hamburger.js"
+                            >
+                                <SyntaxHighlighter language='javascript' style={solarized}>
+                                    {codeString}
+                                </SyntaxHighlighter>
+                            </a>
+                            <a
+                                className="highlighter"
+                                href="https://github.com/ethanselzer/react-lazy-tree/blob/master/example/styles/hamburger.css"
+                            >
+                                <SyntaxHighlighter language='css' style={solarized}>
+                                    {cssString}
+                                </SyntaxHighlighter>
+                            </a>
                         </Col>
                     </Row>
                 </Grid>
