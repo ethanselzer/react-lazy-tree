@@ -14,6 +14,8 @@ Please see [demo site](https://ethanselzer.github.io/react-lazy-tree) and [examp
 ## Status
 [![CircleCI](https://img.shields.io/circleci/project/github/ethanselzer/react-lazy-tree.svg)](https://circleci.com/gh/ethanselzer/react-lazy-tree)
 [![Coverage Status](https://coveralls.io/repos/github/ethanselzer/react-lazy-tree/badge.svg?branch=master)](https://coveralls.io/github/ethanselzer/react-lazy-tree?branch=master)
+[![dependencies Status](https://david-dm.org/ethanselzer/react-lazy-tree/status.svg)](https://david-dm.org/ethanselzer/react-lazy-tree)
+[![devDependencies Status](https://david-dm.org/ethanselzer/react-lazy-tree/dev-status.svg)](https://david-dm.org/ethanselzer/react-lazy-tree?type=dev)
 [![npm](https://img.shields.io/npm/v/react-lazy-tree.svg)](https://www.npmjs.com/package/react-lazy-tree)
 
 ## Installation
@@ -161,6 +163,15 @@ import ReactLazyTree from 'react-lazy-tree'
 
 Please [open an issue](https://github.com/ethanselzer/react-lazy-tree/issues).
 
+## Examples
+
+```ssh
+git clone https://github.com/ethanselzer/react-lazy-tree.git
+cd react-lazy-tree/example
+npm install
+npm start
+```
+
 ## Development
 
 ```ssh
@@ -178,9 +189,7 @@ npm run
 Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch,
 add commits, and [open a pull request](https://github.com/ethanselzer/react-lazy-tree/compare/).
 
+You are awesome! ✨💫
+
 ## License
 MIT
-
-- - -
-
-You are awesome! ✨💫
