@@ -1,6 +1,11 @@
 import React from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
+import npmLogo from '../../images/npm-logo.png';
+import githubLogo from '../../images/github-logo.png';
+
+import '../../styles/header.css';
+
 class Navigation extends React.Component {
     constructor(props) {
         super(props);
@@ -50,6 +55,22 @@ class Navigation extends React.Component {
                         <NavItem eventKey={2} href="#/Hamburger">Hamburger</NavItem>
                         <NavItem eventKey={3} href="#/Catalog/Women/Clothing/Dresses/Work">Category</NavItem>
                         <NavItem eventKey={4} href="#/Viewer">Viewer</NavItem>
+                    </Nav>
+                    <Nav pullRight>
+                        <NavItem
+                            eventKey={1}
+                            className="github-link"
+                            href="https://github.com/ethanselzer/react-lazy-tree"
+                        >
+                            <img src={githubLogo} alt="GitHub Logo" />
+                        </NavItem>
+                        <NavItem
+                            eventKey={2}
+                            href="https://www.npmjs.com/package/react-lazy-tree"
+                            className="npm-link"
+                        >
+                            <img src={npmLogo} alt="NPM Logo" />
+                        </NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
