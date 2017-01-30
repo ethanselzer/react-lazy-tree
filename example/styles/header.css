@@ -23,4 +23,8 @@
     .navbar-nav > li.npm-link > a {
         padding: 11px 0 5px 0;
     }
+
+    ul.navbar-right {
+        margin-right: 0;
+    }
 }
