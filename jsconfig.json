@@ -7,10 +7,15 @@
 		"allowSyntheticDefaultImports": true
 	},
 	"exclude": [
-		"node_modules",
+		".vscode",
 		"coverage",
 		"dist",
-		"data",
-		"fixtures"
+		"example",
+		"node_modules",
+		"scripts",
+		"test/fixtures"
+	],
+	"include": [
+		"example/src"
 	]
 }
