@@ -15,8 +15,8 @@ Please see [demo site](https://ethanselzer.github.io/react-lazy-tree) and [examp
 [![CircleCI](https://img.shields.io/circleci/project/github/ethanselzer/react-lazy-tree.svg)](https://circleci.com/gh/ethanselzer/react-lazy-tree)
 [![Coverage Status](https://coveralls.io/repos/github/ethanselzer/react-lazy-tree/badge.svg?branch=master)](https://coveralls.io/github/ethanselzer/react-lazy-tree?branch=master)
 [![dependencies Status](https://david-dm.org/ethanselzer/react-lazy-tree/status.svg)](https://david-dm.org/ethanselzer/react-lazy-tree)
-[![devDependencies Status](https://david-dm.org/ethanselzer/react-lazy-tree/dev-status.svg)](https://david-dm.org/ethanselzer/react-lazy-tree?type=dev)
 [![npm](https://img.shields.io/npm/v/react-lazy-tree.svg)](https://www.npmjs.com/package/react-lazy-tree)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
