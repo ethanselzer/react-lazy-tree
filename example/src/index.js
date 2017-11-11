@@ -4,7 +4,7 @@ import { hashHistory } from 'react-router';
 
 import Routes from './router';
 
-import '../styles/fonts.css';
+import './styles/fonts.css';
 import './index.css';
 
 ReactDOM.render(
