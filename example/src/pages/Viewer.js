@@ -17,7 +17,7 @@ import codeString from '../code-examples/viewer';
 import cssString from '../code-examples/viewer-css';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../styles/app.css';
+import '../styles/app.css';
 
 registerLanguage('javascript', js);
 registerLanguage('css', css);

@@ -9,7 +9,7 @@ import qr from '../images/hamburger-qr.png';
 import viewer from '../images/viewer.png';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../styles/app.css';
+import '../styles/app.css';
 
 import {
     Clearfix,

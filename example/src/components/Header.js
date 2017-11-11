@@ -4,7 +4,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import npmLogo from '../images/npm-logo.png';
 import githubLogo from '../images/github-logo.png';
 
-import '../../styles/header.css';
+import '../styles/header.css';
 
 class Navigation extends React.Component {
     constructor(props) {
