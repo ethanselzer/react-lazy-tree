@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactLazyTree from 'react-lazy-tree';
 
-import data from '../../data/tree';
+import data from '../data/tree.json';
 
-import '../../styles/viewer.css';
+import '../styles/viewer.css';
 
 class Viewer extends Component {
     render() {

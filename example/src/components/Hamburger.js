@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactLazyTree from 'react-lazy-tree';
 
-import data from '../../data/tree';
+import data from '../data/tree.json';
 import Label from '../components/Label';
 
-import '../../styles/hamburger.css';
+import '../styles/hamburger.css';
 
 class Hamburger extends Component {
     render() {

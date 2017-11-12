@@ -16,10 +16,10 @@ import Hamburger from '../components/Hamburger';
 import codeString from '../code-examples/hamburger';
 import cssString from '../code-examples/hamburger-css';
 
-import qr from '../../images/hamburger-qr.png';
+import qr from '../images/hamburger-qr.png';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../styles/app.css';
+import '../styles/app.css';
 
 registerLanguage('javascript', js);
 registerLanguage('css', css);

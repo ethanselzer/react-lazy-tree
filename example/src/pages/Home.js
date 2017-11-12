@@ -3,13 +3,13 @@ import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
 
-import hamburger from '../../images/hamburger.png';
-import catalog from '../../images/catalog.png';
-import qr from '../../images/hamburger-qr.png';
-import viewer from '../../images/viewer.png';
+import hamburger from '../images/hamburger.png';
+import catalog from '../images/catalog.png';
+import qr from '../images/hamburger-qr.png';
+import viewer from '../images/viewer.png';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../styles/app.css';
+import '../styles/app.css';
 
 import {
     Clearfix,
